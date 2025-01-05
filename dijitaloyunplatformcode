@@ -232,20 +232,6 @@ VALUES
 (3, 3, 30.00, 'Tamamlandı', GETDATE()),
 (4, 4, 70.00, 'Beklemede', GETDATE());
 
-INSERT INTO SatınAlmalar (KullanıcıID, OyunID, SatınAlınmaTarihi, SahiplikDurumu)
-VALUES 
-(1, 1, GETDATE(), 'Sahip'),
-(2, 2, GETDATE(), 'Sahip'),
-(3, 3, GETDATE(), 'Sahip'),
-(4, 4, GETDATE(), 'Sahip');
-
-INSERT INTO BaglantiKuruldugu (Kullanıcı1ID, Kullanıcı2ID, OlusturmaTarihi, Durum)
-VALUES 
-(1, 2, GETDATE(), 'Arkadaşlık Kabul Edildi'),
-(3, 4, GETDATE(), 'Arkadaşlık Bekliyor'),
-(2, 3, GETDATE(), 'Arkadaşlık Kabul Edildi');
-
-
 INSERT INTO Ayarlar (KullanıcıID, DilSecenegi, GorselAyar, SesAyar, BildirimAyar, KontrolAyarları)
 VALUES 
 (1, 'Türkçe', 'Karanlık', 'Orta', 'Açık', 'Varsayılan'),
@@ -462,5 +448,4 @@ SELECT * FROM Kullanıcılar WHERE KullanıcıID = 1;
  SELECT * FROM Kullanıcılar WHERE KullanıcıID=1
 
  EXEC SiparisTamamla @KullanıcıID = 3, @OyunID = 1;
-
 
